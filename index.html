@@ -1,0 +1,43 @@
+<!-- This template is strictly for demoing and testing the palletetown library -->
+<!DOCTYPE html>
+<html>
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: yellow;
+    }
+
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <ul style="list-style: none">
+        <li>
+            <button onclick="palletetown.move('animate', 'right')">Click Me to demo palletetown move right</button>
+        </li>
+        <li>
+            <button onclick="palletetown.move('animate', 'left')">Click Me to demo palletetown move left</button>
+        </li>
+        <li>
+            <button onclick="palletetown.move('animate', 'up')">Click Me to demo palletetown move up</button>
+        </li>
+        <li>
+            <button onclick="palletetown.move('animate', 'down')">Click Me to demo palletetown move down</button>
+        </li>
+    </ul>
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script src="palletetown.js"></script>
+</body>
+
+</html>
