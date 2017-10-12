@@ -84,3 +84,28 @@ palletetown.getElementByIdentifier = function (identifier, index) {
     if (!e) console.error('palletetown: could not find an element with identifier %s and index %d', identifier, index);
     return e;
 }
+
+/**
+ * Add/Remove Class based on location of Header
+ * @param {number} threshold - threshold number of change vertical value
+ * @param {string} identifier
+ * @param {string} classname
+ */
+
+palletetown.scrollcontrol = function(threshold, identifier, classname){
+
+    var el = palletetown.getElementByIdentifier(identifier, 0);
+    var scrollHeight = event.currentTarget.scrollY;
+    if (!el) return;
+
+    if(scrollHeight > threshold){
+        if(!el.className.includes(classname)){
+            el.className += " " + classname;
+        }
+    }
+    else {
+        if(el.className.includes(classname)){
+            el.classList.remove(classname);
+        }
+    }
+}

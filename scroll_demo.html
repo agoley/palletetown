@@ -1,0 +1,34 @@
+<!-- This template is strictly for demoing and testing the palletetown library -->
+<!DOCTYPE html>
+<html>
+<style>
+    #container {
+        width: 400px;
+        height: 200vh;
+
+        background-color: rgba(0,0,255,1);
+    }
+    .demo-item {
+        height: 30px;
+        width: 500px;
+        display: block;
+        border: 2px solid rgba(0,0,0,1);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .demo-color {
+        background: rgba(255,0,0,1);
+    }
+    
+</style>
+
+<body onscroll="palletetown.scrollcontrol(100, 'demo-item', 'demo-color')">
+    <div class="demo-item"></div>
+    <div id="container"></div>
+
+    <script src="palletetown.js"></script>
+</body>
+
+</html>
